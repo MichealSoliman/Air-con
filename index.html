@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- icone -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- flowbite -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!--  AOS – Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400..900&display=swap');
+
+        body {
+            font-family: "Alexandria", sans-serif;
+            scroll-behavior: smooth;
+
+        }
+         html {
+            scroll-behavior: smooth;
+        }
+    </style>
+     <!-- Spinner Start -->
+     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+      
+ <!-- TopBar Start -->
+    <div class="hidden lg:block bg-black text-white/50 py-2 px-0">
+        <div class="flex flex-wrap items-center">
+          <!-- Left Side -->
+          <div class="w-full lg:w-7/12 px-5 text-left flex flex-wrap items-center gap-4">
+            <div class="flex items-center">
+              <i class="fa fa-phone-alt mr-2 text-sm"></i>
+              <small>+012 345 6789</small>
+            </div>
+            <div class="flex items-center">
+              <i class="far fa-envelope-open mr-2 text-sm"></i>
+              <small>info@example.com</small>
+            </div>
+          </div>
+          <!-- Right Side -->
+          <div class="w-full lg:w-5/12 px-5 text-right">
+            <ol class="flex justify-end space-x-4 text-sm mb-0">
+              <li><a href="#" class="text-white/50 hover:text-white">Home</a></li>
+              <li><a href="#" class="text-white/50 hover:text-white">Terms</a></li>
+              <li><a href="#" class="text-white/50 hover:text-white">Privacy</a></li>
+              <li><a href="#" class="text-white/50 hover:text-white">Support</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+        <!-- TopBar End -->
+
+
+
+         <!-- Navbar start -->
+<nav class=" bg-white sticky top-0 z-50 shadow px-4 lg:px-5 py-5">
+  <div class="flex items-center justify-between flex-wrap">
+    <!-- الشعار -->
+    <a href="index.html" class="flex items-center">
+      <img class="h-8 w-auto ml-3" src="img/icon/icon-02-primary.png" alt="">
+      <h1 class="text-xl font-bold">تكييفات جدة</h1>
+    </a>
+
+    <!-- زر القائمة للجوال -->
+    <button id="nav-toggle" class="lg:hidden text-gray-600 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- روابط التنقل -->
+    <div id="nav-menu"
+      class="overflow-hidden bg-white transition-all duration-300 ease-in-out max-h-0 lg:max-h-full w-full lg:flex lg:items-center lg:w-auto flex-col lg:flex-row bg-gray-100 lg:bg-white py-0 px-5 mt-3 lg:mt-0 rounded lg:rounded-none hidden lg:block">
+      <div class="flex flex-col bg-transparent lg:flex-row lg:mx-auto space-y-2 lg:space-y-0 lg:space-x-reverse lg:space-x-6 text-gray-700 text-sm px-4 lg:px-0">
+        <a href="index.html" class="font-md font-medium hover:text-orange-700 m-3">الرئيسية</a>
+        <a href="#about-us" class="font-md hover:text-orange-700 m-3">من نحن</a>
+        <a href="#services" class="font-md hover:text-orange-700 m-3">خدماتنا</a>
+        <a href="#contact" class="font-md hover:text-orange-700 m-3"> تواصل معنا</a>
+
+        
+      </div>
+
+      <!-- أيقونات التواصل -->
+      <div class="hidden bg-white lg:flex items-center space-x-reverse space-x-2 pr-4 px-3 mt-4 lg:mt-0">
+        <a class="w-8 h-8 m-3 flex items-center justify-center rounded-full bg-gray-100 hover:text-orange-700" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a class="w-8 h-8 m-3 flex items-center justify-center rounded-full bg-gray-100 hover:text-orange-700" href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+        <a class="w-8 h-8 m-3 flex items-center justify-center rounded-full bg-gray-100 hover:text-orange-700" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+        <a class="w-8 h-8 m-3 flex items-center justify-center rounded-full bg-gray-100 hover:text-orange-700" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+ <!--End Navbar  -->  
+  <!-- Start Carousel Container -->
+<div class="w-full overflow-hidden mb-12 relative sm:text-xl">
+    <!-- Swiper -->
+    <div class="swiper mySwiper relative w-full">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide relative">
+          <img src="img/carousel-1.jpg" alt="Image" class="w-full h-auto object-cover" />
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <div class="text-center px-4 md:px-0">
+              <h1 class="text-base sm:text-xl md:text-2xl lg:text-4xl text-white font-bold mb-4 animate-fade-in-down">
+                نوفر أفضل خدمات صيانة التكييف
+              </h1>
+              <p class="text-sm sm:text-base md:text-lg lg:text-xl text-white mb-6 animate-fade-in-down">
+                نحن نقدم لك خدمات سريعة وموثوقة لصيانة التكييف بجدة بأسعار مناسبة وجودة عالية
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-orange-700 text-white py-3 px-6 rounded-md hover:bg-transparent hover:border-1  transition animate-fade-in-down"
+                >اكتشف المزيد</a
+              >
+            </div>
+          </div>
+        </div>
+  
+        <!-- Slide 2 -->
+        <div class="swiper-slide relative">
+          <img src="img/carousel-2.jpg" alt="Image" class="w-full h-auto object-cover" />
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <div class="text-center px-4 md:px-0">
+              <h1 class="text-base sm:text-xl md:text-2xl lg:text-3xl text-white font-bold mb-4 animate-fade-in-down">
+                جودة في خدمات التبريد والتدفئة
+              </h1>
+              <p class="text-sm sm:text-base md:text-lg lg:text-xl text-white mb-6 animate-fade-in-down">
+                نضمن لك راحة تامة في منزلك أو مكتبك من خلال خدماتنا المتميزة في أنظمة التبريد والتدفئة
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-orange-700 text-white py-3 px-6 rounded-md hover:bg-transparent hover:border-1  transition animate-fade-in-down"
+                >اكتشف المزيد</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-next !text-white"></div>
+      <div class="swiper-button-prev !text-white"></div>
+  
+      <!-- Pagination -->
+      <div class="swiper-pagination !bottom-4"></div>
+    </div>
+  </div>
+<!-- End Carousel Container -->
+
+
+
+
+  <!-- About Section -->
+
+  
+  <section id="about-us" class="pb-5 bg-white " data-aos="fade-up" data-aos-duration="1500">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 my-10">
+       من  <span class="text-orange-700">نحن</span> 
+      </h2>
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+
+
+      <div class="text-right"  data-aos="fade-up" data-aos-duration="1500">
+        <h6 class="text-sm text-orange-700 uppercase tracking-wider mb-2">
+          <span class="text-orange-700 font-bold">|</span> من نحن
+        </h6>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">نحن خبراء مكيفات في جدة</h2>
+      
+        <!-- الفقرة المختصرة -->
+        <p class="text-gray-700 mb-4">
+          مرحبًا بكم في وكالتنا المتخصصة في حلول التكييف بجدة، حيث نوفّر خدمات احترافية تشمل التركيب والصيانة والتحديث لكافة أنظمة التكييف المنزلية والتجارية والصناعية.
+        </p>
+      
+        <!-- المحتوى الإضافي -->
+        <div id="moreText" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+          <!-- محتوى إضافي مع أيقونات -->
+          <p class="font-semibold text-gray-800 mb-1">
+            <i class="fas fa-cogs text-orange-600 mr-2 w-12 h-8"></i> <strong>التركيب والصيانة</strong>
+          </p>
+          <p class="text-gray-700 mb-4">
+            نقدم خدمات تركيب وصيانة مكيفات عالية الجودة لجميع أنواع التكييفات الحديثة من الماركات الشهيرة، مع ضمانات وخدمات ما بعد البيع.
+          </p>
+      
+          <p class="font-semibold text-gray-800 mb-1">
+            <i class="fas fa-tools text-orange-600 mr-2  w-12 h-8" ></i> <strong>صيانة دورية</strong>
+          </p>
+          <p class="text-gray-700 mb-4">
+            نحرص على تقديم خدمات صيانة دورية للمكيفات لضمان كفاءتها واستمرار عملها بكفاءة عالية طوال العام. 
+          </p>
+      
+          <p class="font-semibold text-gray-800 mb-1 ">
+            <i class="fas fa-shield-alt text-orange-600 mr-2  w-12 h-8"></i> <strong>ضمان عالي الجودة</strong>
+          </p>
+          <p class="text-gray-700 mb-4">
+            نحن نقدم ضمانات شاملة على كافة الخدمات التي نقدمها، مما يضمن لك راحة البال والثقة في خدماتنا.
+          </p>
+      
+          <p class="font-semibold text-gray-800 mb-1">
+            <i class="fas fa-headset text-orange-600 mr-2  w-12 h-8"></i> <strong>دعم فني على مدار الساعة</strong>
+          </p>
+          <p class="text-gray-700 mb-4">
+            نقدم دعمًا فنيًا متواصلاً على مدار الساعة للتأكد من حصول عملائنا على أفضل خدمة في أي وقت.
+          </p>
+      
+         
+        </div>
+      
+        <!-- الزر -->
+        <button
+          id="toggleButton"
+          class="inline-flex items-center gap-2 mt-6 bg-orange-600 text-white px-6 py-3 rounded-md shadow hover:bg-transparent hover:border hover:border-orange-600 hover:text-orange-600 transition"
+          onclick="toggleContent()"
+        >
+          <span id="toggleText">قراءة المزيد</span>
+          
+        </button>
+      </div>
+<!-- Left: Video Image -->
+      <div class="relative order-1 md:order-none" data-aos="zoom-in" data-aos-duration="1500">
+        <img src="./img/about-2.jpg" alt="صورة عن التكييف" class="rounded-lg shadow-lg w-[450px]">
+        <button id="videoBtn" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 transition rounded-lg">
+          <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 84 84">
+            <circle cx="42" cy="42" r="42" fill="rgba(255,255,255,0.2)"/>
+            <path d="M33 27L57 42L33 57V27Z" fill="white"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+      <div class="relative w-full max-w-3xl p-4">
+        <button id="closeVideo" class="absolute top-2 right-2 text-white text-3xl">&times;</button>
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe id="videoFrame" class="w-full h-full rounded-lg"  src="https://www.youtube.com/shorts/fmo4-bv3akI" title="YouTube Video" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section id="services">
+    <!-- خدمة الصيانة والإصلاح -->
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 my-10 py-10">
+        اكتشف <span class="text-orange-700">خدماتنا</span> في تكييف الهواء بجدة
+      </h2>
+    <div class="relative bg-gray-900 text-white ">
+      <div class="bg-[url('./img/services/services3.jpg')] bg-cover bg-center bg-no-repeat h-96 opacity-40  bg-fixed "></div>
+      <div class="absolute inset-0 flex items-center justify-center px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl">
+          <div class="md:w-3/4">
+            <h3 class="text-2xl md:text-3xl font-bold mb-4">خدمة الصيانة والإصلاح</h3>
+            <p>نحن نوفر خدمات إصلاح وصيانة أنظمة التكييف بسرعة واحترافية، لضمان عودة الراحة إلى منزلك أو مكتبك.</p>
+          </div>
+          <div class="md:w-1/4 text-center md:text-left mt-4 md:mt-0">
+            <a href="tel:0565265233" class="inline-block border  border-white text-white bg-transparent px-6 py-2 rounded hover:bg-orange-600 hover:text-white hover:border-0 transition"> اتصل بنا </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  
+    <!-- خدمة تنظيف المكيفات -->
+    <div class="relative bg-gray-900 text-white " >
+      <div class="bg-[url('./img/services/services4.jpg')] bg-cover bg-center bg-no-repeat h-96 opacity-40 bg-fixed"></div>
+      <div class="absolute inset-0 flex items-center justify-center px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl">
+          <div class="md:w-3/4">
+            <h3 class="text-2xl md:text-3xl font-bold mb-4">تنظيف المكيفات</h3>
+            <p>نساعدك في تحسين جودة الهواء الداخلي عبر تنظيف المكيفات بشكل احترافي يضمن لك بيئة صحية ونظيفة.</p>
+          </div>
+          <div class="md:w-1/4 text-center md:text-left mt-4 md:mt-0">
+            <a href="https://wa.me/0565265233" class="inline-block border  border-white text-white bg-transparent px-6 py-2 rounded hover:bg-orange-600 hover:text-white hover:border-0 transition">احجز واتساب</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- خدمة تركيب المكيفات -->
+    <div class="relative bg-gray-900 text-white " >
+      <div class="bg-[url('./img/services/services5.jpg')] bg-cover bg-center bg-no-repeat h-96 opacity-40 bg-fixed"></div>
+      <div class="absolute inset-0 flex items-center justify-center px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl">
+          <div class="md:w-3/4">
+            <h3 class="text-2xl md:text-3xl font-bold mb-4">تركيب أنظمة التكييف</h3>
+            <p>نقدم خدمات تركيب لأحدث أنظمة التكييف بطرق تضمن الكفاءة العالية وتوفير الطاقة.</p>
+          </div>
+          <div class="md:w-1/4 text-center md:text-left mt-4 md:mt-0">
+            <a href="https://wa.me/0565265233" class="inline-block border  border-white text-white bg-transparent px-6 py-2 rounded hover:bg-orange-600 hover:text-white hover:border-0 transition"> اعرف المزيد</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- خدمة الصيانة الدورية -->
+    <div class="relative bg-gray-900 text-white   transition duration-300" >
+      <div class="bg-[url('./img/services/services3.jpg')] bg-cover bg-center bg-no-repeat h-96 opacity-40 bg-fixed"></div>
+      <div class="absolute inset-0 flex items-center justify-center px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl">
+          <div class="md:w-3/4">
+            <h3 class="text-2xl md:text-3xl font-bold mb-4">الصيانة الدورية</h3>
+            <p>نقدم خطط صيانة دورية مخصصة للحفاظ على أداء مكيفاتك وضمان عمر أطول للأجهزة.</p>
+          </div>
+          <div class="md:w-1/4 text-center md:text-left mt-4 md:mt-0">
+            <a href="tel:0565265233" class="inline-block border  border-white text-white bg-transparent px-6 py-2 rounded hover:bg-orange-600 hover:text-white hover:border-0 transition"> اتصل الان</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="ac-faq" class="py-16 bg-gray-100 text-right" data-aos="fade-left" data-aos-duration="1500">
+    <div class=" container w-[80%] m-auto flex flex-col-reverse lg:flex-row items-center gap-10 px-4">
+      
+      <!-- الأسئلة -->
+      <div class="lg:w-1/2 w-full">
+        <div class="text-center lg:text-right mb-10">
+          <h6 class="text-orange-700 font-semibold mb-2">| الأسئلة الشائعة</h6>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">كل ما تريد معرفته عن التكييفات في جدة</h2>
+        </div>
+  
+        <div class="space-y-4">
+          <!-- عنصر الأسئلة المتكررة -->
+          <details class="group bg-white p-5 rounded-md shadow transition-all duration-300 open:shadow-lg open:bg-blue-50">
+            <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-800 transition-colors duration-300 group-open:text-blue-700">
+              لماذا الصيانة الدورية للتكييف ضرورية؟
+              <svg class="w-5 h-5 transform transition-transform duration-300 group-open:rotate-180 text-gray-600 group-open:text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <p class="mt-3 text-gray-600 leading-relaxed transition-opacity duration-300">
+              الصيانة المنتظمة تضمن كفاءة التشغيل وتطيل عمر الجهاز وتقلل من تكاليف الإصلاح المستقبلية.
+            </p>
+          </details>
+  
+        
+          <details class="group bg-white p-5 rounded-md shadow transition-all duration-300 open:shadow-lg open:bg-blue-50">
+            <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-800 transition-colors duration-300 group-open:text-blue-700">
+              ما هي علامات أن التكييف يحتاج إلى إصلاح؟
+              <svg class="w-5 h-5 transform transition-transform duration-300 group-open:rotate-180 text-gray-600 group-open:text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <p class="mt-3 text-gray-600 leading-relaxed transition-opacity duration-300">
+              ضعف التبريد، أصوات غير طبيعية، تسرب مياه أو هواء دافئ بدلًا من البارد.
+            </p>
+          </details>
+          <details class="group bg-white p-5 rounded-md shadow transition-all duration-300 open:shadow-lg open:bg-blue-50">
+            <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-800 transition-colors duration-300 group-open:text-blue-700">
+                كيف أعرف أن المكيف يحتاج إلى صيانة أو إصلاح؟
+              <svg class="w-5 h-5 transform transition-transform duration-300 group-open:rotate-180 text-gray-600 group-open:text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <p class="mt-3 text-gray-600 leading-relaxed transition-opacity duration-300">
+                من علامات الحاجة للصيانة: ضعف التبريد، أصوات غريبة، تسرب مياه، أو ارتفاع فاتورة الكهرباء. هذه إشارات على وجود خلل في المكيف.
+            </p>
+          </details>
+          <details class="group bg-white p-5 rounded-md shadow transition-all duration-300 open:shadow-lg open:bg-blue-50">
+            <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-800 transition-colors duration-300 group-open:text-blue-700">
+                ما الفرق بين المكيف العادي والإنفرتر في توفير الكهرباء؟
+
+              <svg class="w-5 h-5 transform transition-transform duration-300 group-open:rotate-180 text-gray-600 group-open:text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <p class="mt-3 text-gray-600 leading-relaxed transition-opacity duration-300">
+                مكيف الإنفرتر يوفر استهلاك الكهرباء بنسبة كبيرة مقارنةً بالمكيف العادي، لأنه يحافظ على درجة حرارة ثابتة بدون توقف مستمر.
+
+
+            </p>
+          </details>
+  
+          
+        </div>
+      </div>
+  
+      <!-- الصورة -->
+      <div class="lg:w-1/2 w-full group relative" data-aos="zoom-in" data-aos-duration="1500">
+        <img id="openImage" src="./img/istockphoto-1314253037-2048x2048.jpg" alt="خدمات التكييف بجدة" class="w-full h-auto rounded-lg shadow-lg transform transition duration-500 ease-in-out group-hover:scale-105 cursor-pointer">
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+         
+        </div>
+      </div>
+  
+      <!-- Lightbox -->
+      <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50 transition-opacity duration-300">
+        <div class="relative">
+          <img src="./img/istockphoto-1314253037-2048x2048.jpg" alt="معاينة" class="max-w-full max-h-screen rounded-lg">
+          
+        </div>
+      </div>
+  
+      <script>
+        const openImage = document.getElementById('openImage');
+        const lightbox = document.getElementById('lightbox');
+        const closeLightbox = document.getElementById('closeLightbox');
+  
+        openImage.addEventListener('click', () => {
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+        });
+  
+        closeLightbox.addEventListener('click', () => {
+          lightbox.classList.add('hidden');
+        });
+      </script>
+    </div>
+  </section>
+
+
+  <section id="products" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">أفضل 
+        <span class="text-orange-700">المكيفات</span> في جدة</h2>
+  
+      <div class="grid grid-cols-1 w-[85%] m-auto sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- كارت -->
+        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300" data-aos="zoom-in" data-aos-duration="1000">
+          <img src="./img/istockphoto-1314253037-2048x2048.jpg" alt="مكيف 1" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">مكيف سبليت 2 طن</h3>
+            <p class="text-gray-600 mb-4">تبريد سريع، موفر للطاقة، مناسب للمساحات المتوسطة.</p>
+            <a href="#" class="inline-block text-blue-600 hover:text-blue-800 font-semibold transition">معرفة المزيد</a>
+          </div>
+        </div>
+  
+        <!-- كارت 2 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300"data-aos="zoom-in" data-aos-duration="1500">
+          <img src="./img/feature.jpg" alt="مكيف 2" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">مكيف شباك قوي</h3>
+            <p class="text-gray-600 mb-4">أداء عالي بسعر اقتصادي، مثالي للغرف الصغيرة.</p>
+            <a href="#" class="inline-block text-blue-600 hover:text-blue-800 font-semibold transition">معرفة المزيد</a>
+          </div>
+        </div>
+  
+        <!-- كارت 3 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300"data-aos="zoom-in" data-aos-duration="2000">
+          <img src="./img/about-3.jpg" alt="مكيف 3" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">مكيف متنقل</h3>
+            <p class="text-gray-600 mb-4">مرن وسهل النقل، لا يحتاج لتركيب دائم.</p>
+            <a href="#" class="inline-block text-blue-600 hover:text-blue-800 font-semibold transition">معرفة المزيد</a>
+          </div>
+        </div>
+  
+        <!-- كارت 4 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300" data-aos="zoom-in" data-aos-duration="2500">
+          <img src="./img/istockphoto-1437896577-612x612.jpg" alt="مكيف 4" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">مكيف مركزي</h3>
+            <p class="text-gray-600 mb-4">حل مثالي للفيلات أو المكاتب الكبيرة مع توزيع متساوٍ.</p>
+            <a href="#" class="inline-block text-blue-600 hover:text-blue-800 font-semibold transition">معرفة المزيد</a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  
+
+
+
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="text-center mb-12">
+        <h1 class="text-3xl font-bold text-orange-700">الاتصال بنا</h1>
+        
+      </div>
+    <div class="container mx-auto px-4">
+      <div class="flex w-[85%] m-auto flex-col lg:flex-row gap-10 items-stretch">
+        
+       
+  
+        <!-- الخريطة -->
+        <div class="w-full lg:w-1/2 h-full mt-10" data-aos="zoom-in"data-aos-duration="2000">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.457285090749!2d46.72185241499997!3d24.71355118410948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f038cfe831efd%3A0x21a5d7d2bbfe12c0!2z2YXYsdmD2LIg2KfZhNmF2KzYp9mF!5e0!3m2!1sar!2ssa!4v1625315436374!5m2!1sar!2ssa" 
+            class="w-full h-full min-h-[400px] rounded-lg shadow-md"
+            style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- button coll -->
+<div class="fixed bottom-6 left-6 flex flex-col gap-4 z-50">
+    <!-- زر واتساب -->
+    <a href="https://wa.me/0565265233" target="_blank" 
+       class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.38 0 .04 5.34 0 11.95a11.91 11.91 0 001.7 6.15L0 24l6.09-1.7a11.92 11.92 0 005.91 1.57h.05c6.62 0 12-5.34 12-11.95a11.94 11.94 0 00-3.53-8.44zm-8.51 17.6a10.22 10.22 0 01-5.19-1.42l-.37-.22-3.63 1 1-3.53-.24-.38a10.14 10.14 0 01-1.55-5.4c.03-5.61 4.61-10.17 10.25-10.17a10.25 10.25 0 0110.25 10.23c0 5.63-4.61 10.2-10.25 10.2zm5.64-7.74c-.31-.16-1.83-.9-2.12-1s-.49-.16-.7.16-.8 1-.98 1.2-.36.24-.67.08a8.3 8.3 0 01-2.44-1.5 9 9 0 01-1.66-2.07c-.17-.3 0-.46.13-.61.13-.13.3-.33.44-.5a2.1 2.1 0 00.3-.52c.1-.16.05-.38 0-.53s-.7-1.7-.96-2.33c-.25-.6-.5-.51-.7-.52h-.6a1.2 1.2 0 00-.86.4 3.63 3.63 0 00-1.14 2.7c0 1.59 1.14 3.12 1.3 3.34s2.22 3.4 5.38 4.77a18.5 18.5 0 002.08.77 4.93 4.93 0 002.25.14 3.68 3.68 0 002.4-1.74 3.1 3.1 0 00.22-1.73c-.1-.15-.29-.24-.6-.4z"/>
+      </svg>
+    </a>
+  
+    <!-- زر الاتصال -->
+    <a href="tel:0565265233" 
+    class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition duration-300">
+   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+     <path d="M3.654 2.328a.678.678 0 00-1.015-.063C.57 4.338-.159 6.768.052 9.19c.211 2.422 1.201 4.76 2.89 6.781 1.69 2.02 3.953 3.72 6.706 4.862a15.227 15.227 0 006.84 1.27c1.934-.06 3.782-.517 5.39-1.32a.678.678 0 00.062-1.015l-2.4-2.76a.678.678 0 00-.887-.103l-2.7 1.35a.678.678 0 01-.716-.07 10.963 10.963 0 01-4.664-4.705.678.678 0 01-.07-.716l1.35-2.7a.678.678 0 00-.103-.887L3.654 2.328z"/>
+   </svg>
+ </a>
+  </div>
+  
+  
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- زر الرجوع للأعلى -->
+<button id="scrollToTopBtn" 
+  class="fixed bottom-5 right-5 bg-orange-700 text-white px-3 py-3  rounded-full shadow-lg hidden hover:bg-orange-800 transition">
+  Up
+</button>
+
+
+
+
+<footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Logo + Description -->
+      <div>
+        <h2 class="text-white text-2xl font-bold mb-4"> تكييفات جدة</h2>
+        <p class="text-gray-400">نحن نقدم أفضل خدمات التكييف بجدة بجودة عالية وأسعار مناسبة.</p>
+      </div>
+  
+      <!-- روابط سريعة -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-4">روابط سريعة</h3>
+        <ul class="space-y-2">
+          <li><a href="#home" class="hover:text-white transition">الرئيسية</a></li>
+          <li><a href="#services" class="hover:text-white transition">الخدمات</a></li>
+          <li><a href="#about-us" class="hover:text-white transition">من نحن</a></li>
+          <li><a href="#contact" class="hover:text-white transition">اتصل بنا</a></li>
+        </ul>
+      </div>
+  
+      <!-- تواصل معنا -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-4">تابعنا</h3>
+        <div class="flex gap-4 text-2xl">
+          <a href="#" class="hover:text-blue-500 transition"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+      &copy; 2025 جميع الحقوق محفوظة | تكييفات جدة
+    </div>
+  </footer>
+  
+
+  
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Swiper Init -->
+<!-- flowbite -->
+ <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+ <!--  AOS – Animate On Scroll -->
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script>
+    AOS.init();
+  </script>
+        <script src="./script.js"></script>
+</body>
+</html>
