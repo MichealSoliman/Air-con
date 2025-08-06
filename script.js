@@ -18,6 +18,7 @@ toggle.addEventListener('click', () => {
 
 
 
+
 //  Swiper JS 
 const swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -34,6 +35,7 @@ const swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+
 
 
 // video about
@@ -61,6 +63,7 @@ videoModal.addEventListener('click', (e) => {
 
 // Toggle content About
 
+
 function toggleContent() {
     const moreText = document.getElementById("moreText");
     const toggleText = document.getElementById("toggleText");
@@ -80,12 +83,7 @@ function toggleContent() {
   }
 
 
-
   
-
-
-
-
 
 // Scroll to Top Button
   const scrollBtn = document.getElementById('scrollToTopBtn');
