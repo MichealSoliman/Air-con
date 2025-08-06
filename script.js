@@ -82,9 +82,6 @@ function toggleContent() {
     }
   }
 
-
-  
-
 // Scroll to Top Button
   const scrollBtn = document.getElementById('scrollToTopBtn');
 
