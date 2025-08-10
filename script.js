@@ -72,8 +72,7 @@ function toggleContent() {
     if (moreText.classList.contains("max-h-0")) {
       moreText.classList.remove("max-h-0");
       moreText.classList.add("max-h-96");
-      toggleText.textContent = "قراءة أقل";
-      
+      toggleText.textContent = "قراءة أقل"; 
     } else {
       moreText.classList.remove("max-h-96");
       moreText.classList.add("max-h-0");
